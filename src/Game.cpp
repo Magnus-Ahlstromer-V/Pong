@@ -5,7 +5,7 @@ SDL_Renderer* Game::_renderer = nullptr;
 
 Game::Game()
 {
-    player1 = new Paddle(20, 600 / 2 - 50, 15, 100, 0xFF, 0xFF, 0xFF, 0xFF);
+    player1 = new Paddle(15, 600 / 2 - 50, 15, 100, 0xFF, 0xFF, 0xFF, 0xFF);
     player2 = new Paddle(770, 600 / 2 - 50, 15, 100, 0xFF, 0xFF, 0xFF, 0xFF);
 
     ball = new Ball(800 / 2 - 15, 600 / 2 - 15, 15, 15, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -55,10 +55,17 @@ void Game::Update()
 
     ball->Update();
 
-    player1->CheckCollision();
-    player2->CheckCollision();
+    player1->CheckScreenCollision();
+    player2->CheckScreenCollision();
 
-    ball->CheckCollision();
+    ball->CheckScreenCollision();
+
+    // Ball and paddle collision
+    if (ball->GetX() > 755 && ball->GetY() < player2->GetY() + 100 && ball->GetY() > player2->GetY() - 100)
+        ball->SetDx(ball->GetDx() * -1);
+    
+    if (ball->GetX() < 30 && ball->GetY() < player1->GetY() + 100 && ball->GetY() > player1->GetY() - 100)
+        ball->SetDx(ball->GetDx() * -1);
 }
 
 void Game::Render()

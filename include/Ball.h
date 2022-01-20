@@ -9,15 +9,20 @@ public:
 
     void Draw();
     void Update();
-    void CheckCollision();
+    void CheckScreenCollision();
 
     inline float GetX() const { return _x; }
     inline float GetY() const { return _y; }
+    inline int GetDx() const { return _dx; }
+    inline int GetDy() const { return _dy; }
+
     inline void SetPos(float x, float y) 
     {
         _x = x;
         _y = y; 
     }
+    inline void SetDx(float dx) { _dx = dx; }
+    inline void SetDy(float dy) { _dy = dy; }
 
 private:
     float _x, _y;

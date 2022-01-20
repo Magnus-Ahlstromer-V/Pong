@@ -17,7 +17,7 @@ void Paddle::Draw()
     SDL_RenderFillRect(Game::_renderer, &rect);
 }
 
-void Paddle::CheckCollision()
+void Paddle::CheckScreenCollision()
 {
     if (_y <= 0) _y = 0;
     if (_y >= 600 - 100) _y = 600 - 100;

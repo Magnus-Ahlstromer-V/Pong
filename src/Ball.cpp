@@ -26,8 +26,9 @@ void Ball::Update()
     _y += _dy;
 }
 
-void Ball::CheckCollision()
+void Ball::CheckScreenCollision()
 {
+    // Collision with screen
     if (_y <= 0) _dy *= -1;
     if (_y >= 600 - 15) _dy *= -1;
 
