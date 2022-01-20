@@ -52,6 +52,9 @@ void Game::Update()
     // Make player2 move
     if (keys[SDL_SCANCODE_UP]) player2->SetY(player2->GetY() - 5);
     if (keys[SDL_SCANCODE_DOWN]) player2->SetY(player2->GetY() + 5);
+
+    player1->CheckCollision();
+    player2->CheckCollision();
 }
 
 void Game::Render()

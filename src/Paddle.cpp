@@ -16,3 +16,9 @@ void Paddle::Draw()
     SDL_SetRenderDrawColor(Game::_renderer, _r, _g, _b, _a);
     SDL_RenderFillRect(Game::_renderer, &rect);
 }
+
+void Paddle::CheckCollision()
+{
+    if (_y <= 0) _y = 0;
+    if (_y >= 600 - 100) _y = 600 - 100;
+}

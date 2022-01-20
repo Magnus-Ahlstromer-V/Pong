@@ -8,6 +8,7 @@ public:
     Paddle(float x, float y, int width, int height, int r, int g, int b, int a);
 
     void Draw();
+    void CheckCollision();
 
     inline float GetY() const { return _y; }
     inline void SetY(float y) { _y = y; }

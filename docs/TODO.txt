@@ -20,6 +20,8 @@ Paddle class:
     * Draw another paddle (done)
     * Make the first paddle move by WASD (done)
     * Make the second paddle move by arrow keys (done)
+    * Don't let the paddles go higher than the screen
+    * Don't let the paddles go lower than the screen
 
 Ball class:
     * Create a ball class (done)
