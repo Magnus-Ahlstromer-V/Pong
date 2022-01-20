@@ -1,0 +1,27 @@
+=== PONG! ===
+
+Main file:
+    * Initialize the game class (done)
+    * While the game is running, run the game (done)
+    * Clean the game when the game isn't running (done)
+
+Game class:
+    * Create a game class (done)
+    * Check if SDL2 is initialized (done)
+    * Create window and renderer (done)
+    * Check if window and renderer are created (done)
+    * Check if the user closes the window (done)
+    * Add a cleaner function (done)
+    * Draw the window to the monitor (done)
+
+Paddle class:
+    * Create a paddle class (done)
+    * Draw a paddle (done)
+    * Draw another paddle (done)
+    * Make the first paddle move by WASD (done)
+    * Make the second paddle move by arrow keys (done)
+
+Ball class:
+    * Create a ball class (done)
+    * Draw the ball (done)
+    * Get ball physics workng
