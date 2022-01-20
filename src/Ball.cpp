@@ -30,4 +30,10 @@ void Ball::CheckCollision()
 {
     if (_y <= 0) _dy *= -1;
     if (_y >= 600 - 15) _dy *= -1;
+
+    if (_x <= 0 || _x >= 800 - 15)
+    {
+        SetPos(800 / 2 - 15, 600 / 2 - 15);
+        _dx *= -1;
+    }
 }

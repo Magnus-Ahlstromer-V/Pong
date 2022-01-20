@@ -8,7 +8,7 @@ Game::Game()
     player1 = new Paddle(20, 600 / 2 - 50, 15, 100, 0xFF, 0xFF, 0xFF, 0xFF);
     player2 = new Paddle(770, 600 / 2 - 50, 15, 100, 0xFF, 0xFF, 0xFF, 0xFF);
 
-    ball = new Ball(800 / 2 - 10, 600 / 2 - 10, 15, 15, 0xFF, 0xFF, 0xFF, 0xFF);
+    ball = new Ball(800 / 2 - 15, 600 / 2 - 15, 15, 15, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
 void Game::Init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen)

@@ -29,3 +29,4 @@ Ball class:
     * Move the ball (done)
     * Make the ball bounce off walls (done)
     * Make the ball bounce off paddles
+    * If the ball goes off to a side, reset it and make it start the other direction
