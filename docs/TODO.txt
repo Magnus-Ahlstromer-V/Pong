@@ -27,5 +27,5 @@ Ball class:
     * Create a ball class (done)
     * Draw the ball (done)
     * Move the ball (done)
-    * Make the ball bounce off walls
+    * Make the ball bounce off walls (done)
     * Make the ball bounce off paddles

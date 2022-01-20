@@ -9,6 +9,7 @@ public:
 
     void Draw();
     void Update();
+    void CheckCollision();
 
     inline float GetX() const { return _x; }
     inline float GetY() const { return _y; }

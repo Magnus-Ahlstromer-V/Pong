@@ -57,6 +57,8 @@ void Game::Update()
 
     player1->CheckCollision();
     player2->CheckCollision();
+
+    ball->CheckCollision();
 }
 
 void Game::Render()
