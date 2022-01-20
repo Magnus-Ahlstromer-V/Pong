@@ -26,4 +26,6 @@ Paddle class:
 Ball class:
     * Create a ball class (done)
     * Draw the ball (done)
-    * Get ball physics workng
+    * Move the ball (done)
+    * Make the ball bounce off walls
+    * Make the ball bounce off paddles
