@@ -25,6 +25,8 @@ public:
     inline void SetDy(float dy) { _dy = dy; }
 
 private:
+    SDL_Rect _rect;
+
     float _x, _y;
     int _width, _height;
     int _dx, _dy;

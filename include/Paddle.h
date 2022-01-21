@@ -14,6 +14,8 @@ public:
     inline void SetY(float y) { _y = y; }
 
 private:
+    SDL_Rect _rect;
+
     float _x, _y;
     int _width, _height;
     int _r, _g, _b, _a;

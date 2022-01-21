@@ -7,14 +7,13 @@ _x(x), _y(y), _width(width), _height(height), _r(r), _g(g), _b(b), _a(a)
 
 void Paddle::Draw()
 {
-    SDL_Rect rect;
-    rect.x = _x;
-    rect.y = _y;
-    rect.w = _width;
-    rect.h = _height;
+    _rect.x = _x;
+    _rect.y = _y;
+    _rect.w = _width;
+    _rect.h = _height;
 
     SDL_SetRenderDrawColor(Game::_renderer, _r, _g, _b, _a);
-    SDL_RenderFillRect(Game::_renderer, &rect);
+    SDL_RenderFillRect(Game::_renderer, &_rect);
 }
 
 void Paddle::CheckScreenCollision()
