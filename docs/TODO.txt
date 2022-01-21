@@ -30,3 +30,4 @@ Ball class:
     * Make the ball bounce off walls (done)
     * Make the ball collide with the paddles (done)
     * If the ball goes off to a side, reset it and make it start the other direction (done)
+    * When the ball hits an edge, apply the score
