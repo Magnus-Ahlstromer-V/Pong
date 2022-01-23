@@ -37,3 +37,24 @@ void Ball::CheckScreenCollision()
         _dx *= -1;
     }
 }
+
+bool Ball::CheckPaddleCollision(Paddle& paddle)
+{
+    float ballLeft = _x;
+    float ballRight = _x + 15; // x + ball_width
+    float ballTop = _y;
+    float ballBottom = _y + 15; // y + ball_height 
+
+    float paddleLeft = paddle.GetX();
+    float paddleRight = paddle.GetX() + 15; // paddle_x + paddle_width
+    float paddleTop = paddle.GetY();
+    float paddleBottom = paddle.GetY() + 100; // paddle_y + paddle_height
+
+    // If any of these cases return false
+    if (ballLeft >= paddleRight) return false;
+    if (ballRight <= paddleLeft) return false;
+    if (ballTop >= paddleBottom) return false;
+    if (ballBottom <= paddleTop) return false;
+
+    return true;
+}

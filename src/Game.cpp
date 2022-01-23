@@ -62,11 +62,7 @@ void Game::Update()
     player2->CheckScreenCollision();
 
     ball->CheckScreenCollision();
-
-    // Ball and paddle collision
-    if (ball->GetX() + 15 > 770 && ball->GetX() < 770 + 15 && ball->GetY() < player2->GetY() +  100 && ball->GetY() + 15 > player2->GetY())
-        ball->SetDx(ball->GetDx() * -1);
-    if (ball->GetX() + 15 < 45 && ball->GetX() > 15 && ball->GetY() < player1->GetY() +  100 && ball->GetY() + 15 > player1->GetY())
+    if (ball->CheckPaddleCollision(*player1) || ball->CheckPaddleCollision(*player2))
         ball->SetDx(ball->GetDx() * -1);
 }
 

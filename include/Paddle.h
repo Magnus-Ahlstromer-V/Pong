@@ -10,6 +10,7 @@ public:
     void Draw();
     void CheckScreenCollision();
 
+    inline float GetX() const { return _x; }
     inline float GetY() const { return _y; }
     inline void SetY(float y) { _y = y; }
 

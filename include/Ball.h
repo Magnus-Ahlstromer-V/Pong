@@ -1,4 +1,5 @@
 #pragma once
+#include "Paddle.h"
 #include <SDL2/SDL.h>
 
 class Ball
@@ -10,6 +11,7 @@ public:
     void Draw();
     void Update();
     void CheckScreenCollision();
+    bool CheckPaddleCollision(Paddle& paddle);
 
     inline float GetX() const { return _x; }
     inline float GetY() const { return _y; }
