@@ -1,7 +1,7 @@
 OBJS = ./src/*.cpp
 CC = g++
 COMPILER_FLAGS = -g -Wall
-LINKER_FLAGS = -L ./lib -lmingw32 -lSDL2main -lSDL2
+LINKER_FLAGS = -L ./lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf
 INCLUDES = -I ./include
 OBJ_NAME = Pong
 
