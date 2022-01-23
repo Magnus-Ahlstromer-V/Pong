@@ -33,6 +33,10 @@ void Game::Init(const char* title, int xPos, int yPos, int width, int height, bo
     else { SDL_Log("Failed to initialize SDL2: %s", SDL_GetError()); }
 
     if (TTF_Init() != 0) std::cerr << "Failed to init TTF...\n";    
+
+    TTF_Font* scoreFont = TTF_OpenFont("res/font.ttf", 40);
+    player1ScoreText = new ScoreManager(800 / 4, 20, scoreFont);
+    player2ScoreText = new ScoreManager(3 * 800 / 4, 20, scoreFont);
 }
 
 void Game::HandleEvents()
@@ -73,6 +77,8 @@ void Game::Render()
 
     player1->Draw();
     player2->Draw();
+    player1ScoreText->Draw();
+    player2ScoreText->Draw();
 
     ball->Draw();
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "Paddle.h"
 #include "Ball.h"
+#include "ScoreManager.h"
 #include <SDL2/SDL.h>
 
 class Game
@@ -24,6 +25,9 @@ private:
     Paddle* player1;
     Paddle* player2;
     Ball* ball;
+
+    ScoreManager* player1ScoreText;
+    ScoreManager* player2ScoreText;
 
     SDL_Window* _window = nullptr;
 };
