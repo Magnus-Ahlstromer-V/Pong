@@ -4,8 +4,8 @@
 Ball::Ball(float x, float y, int width, int height, int r, int g, int b, int a) :
 _x(x), _y(y), _width(width), _height(height), _r(r), _g(g), _b(b), _a(a)
 {
-    _dx = 2;
-    _dy = -2;
+    _dx = 4;
+    _dy = -4;
 }
 
 void Ball::Draw()
