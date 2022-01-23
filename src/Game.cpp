@@ -1,5 +1,6 @@
 #include "Game.h"
 #include <iostream>
+#include <SDL2/SDL_ttf.h>
 
 SDL_Renderer* Game::_renderer = nullptr;
 
@@ -30,6 +31,8 @@ void Game::Init(const char* title, int xPos, int yPos, int width, int height, bo
         else printf("Renderer created successfully!\n");
     }
     else { SDL_Log("Failed to initialize SDL2: %s", SDL_GetError()); }
+
+    if (TTF_Init() != 0) std::cerr << "Failed to init TTF...\n";    
 }
 
 void Game::HandleEvents()
@@ -85,5 +88,6 @@ void Game::Clean()
     printf("Game cleaned!\n");
     SDL_DestroyWindow(_window);
     SDL_DestroyRenderer(_renderer);
+    TTF_Quit();
     SDL_Quit();
 }
